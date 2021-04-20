@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>gasteroids</title>
+</head>
+<body>
+    <div class="screen_to_small">
+        <h1 class="screen_to_small__header">Your screen's just too damn small to play (-_-｡)</h1>
+        <div class="screen_to_small__img_wrapper">
+            <img src="./images/gasteroids3.png" alt="game banner" class="screen_to_small__img">
+        </div>
+    </div>
+    <header id="header">
+        <div class="brand_wrapper"><img src="./images/gasteroids2.png" alt="Gasteroids" class="brand_img"></div>
+    </header>
+    <main id="main">
+        <section class="intro intro__one">
+            <div class="intro__copy p_1">Charlie Mae is intolerant of all things created from the milk of a cow. </div> 
+            <div class="intro__copy p_2">She is also, most definitely, a vegetarian, whose diet primarily consists of marshmallows, bell peppers and pepperoni sticks.</div>
+        </section>
+        <button href="#" id="start_button" class="reading__1"> Next &#127846</button>
+    </main>
+    <aside class="container">
+        <div class="score_container container">
+            <h2>Score :</h2>
+            <p id="score"></p>
+        </div>
+        <div class="lives_container container">
+            <h2>Lives :</h2>
+            <p id="lives"></p>
+        </div>
+        <div class="level_container container">
+            <h2>Level :</h2>
+            <p id="level"></p>
+        </div>
+    </aside>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="logo_wrapper"><img src="./images/eff-win.png" alt="logo" class="logo"></div>
+            <div class="slogan"><span>hi.sam</span></div>
+        </div>
+        <div class="credits">
+            <ul class="credits__list">
+                <li class="credits__item">player illustrations by <a href="www.leine.nl">Leine</a></li>
+                <li class="credits__item">fart illustrations by <a href="www.leifparker.com">Leif Parker</a></li>
+                <li class="credits__item">icons from freepik.com, thanks!</li>
+                <li class="credits__item">music by kevin macleod, genius!</li>
+                <li class="credits__item">sound effect from zapsplat.com yay!</li>
+            </ul>
+        </div>
+    </footer> 
+    <script src="app.js"></script>   
+    <script src="game_area.js"></script>
+    <script src="actor.js"></script>
+    <script src="boss.js"></script>
+    <script src="fart.js"></script>
+    <script src="player.js"></script>
+    <script src="sounds.js"></script>
+    <script src="state.js"></script>
+</body>
+</html>
