@@ -34,7 +34,6 @@ if (startButton) {
         gameArea.stopGame();
         setTimeout(() => {
           gameArea.resetGame();
-          document.querySelector('#canvas').style.backgroundColor = 'mediumblue';
         }, 2000);
       });
     }
@@ -76,12 +75,15 @@ function trackLevels(level) {
 
 const delayedColorChange = (color, delay) => {
   return new Promise((resolve, reject) => {
+    if(gameArea.state.state === 'winning') {  
       setTimeout(() => {
-        if(gameArea) {
           document.querySelector('#canvas').style.backgroundColor = color;
           resolve();
-        }
       }, delay);
+    } else {
+      document.querySelector('#canvas').style.backgroundColor = 'mediumblue';
+      reject();
+    }
   });
 };
 
