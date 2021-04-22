@@ -32,7 +32,10 @@ if (startButton) {
       document.getElementById('header').appendChild(resetButton);
       resetButton.addEventListener('click', e => {
         gameArea.stopGame();
-        setTimeout(() => {gameArea.resetGame();}, 2000);
+        setTimeout(() => {
+          gameArea.resetGame();
+          document.querySelector('#canvas').style.backgroundColor = 'mediumblue';
+        }, 2000);
       });
     }
   });
