@@ -1,5 +1,6 @@
 const startButton = document.getElementById('start_button');
 let gameArea = null;
+document.querySelector('.brand_img').addEventListener('click', () => gameArea.state.win());
 
 if (startButton) {
   startButton.addEventListener('click', e => {
