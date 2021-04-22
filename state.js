@@ -47,7 +47,7 @@ class State {
         this.state = 'winning';
         this.gameArea.player.spriteIndex = 1;
         this.gameArea.player.size = {w: 200, h: 283};
-           
+        rainbow();
     }
 
     lose(){
