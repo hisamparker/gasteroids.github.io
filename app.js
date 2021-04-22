@@ -70,3 +70,32 @@ function trackLevels(level) {
   const levels = document.getElementById('level');
   levels.innerText = level;
 }
+
+const delayedColorChange = (color, delay) => {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if(gameArea) {
+          document.querySelector('#canvas').style.backgroundColor = color;
+          resolve();
+        }
+      }, delay);
+  });
+};
+
+async function rainbow() {
+  try {
+    await delayedColorChange('#F72585', 1000);
+    await delayedColorChange('#B5179E', 1000);
+    await delayedColorChange('#7209B7', 1000);
+    await delayedColorChange('#560BAD', 1000);
+    await delayedColorChange('#560BAD', 1000);
+    await delayedColorChange('#4361EE', 1000);
+    await delayedColorChange('#4895EF', 1000);
+    await delayedColorChange('#4CC9F0', 1000);
+    await delayedColorChange('#00e5ff', 1000);
+    await delayedColorChange('#80ffdb', 1000);
+    
+  } catch (error) {
+    console.log(`error ${error}`);
+  }
+}
