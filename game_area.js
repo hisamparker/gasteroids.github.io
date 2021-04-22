@@ -249,6 +249,7 @@ class GameArea {
         this.state.level = 1;
         this.state.points = 0;
         this.state.state = 'playing';
+        this.state.bossLevel = 0;
         this.projectiles = [];
         this.wins = [];
         this.missiles = [];
