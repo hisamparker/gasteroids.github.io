@@ -270,6 +270,6 @@ class GameArea {
         trackLives(this.player.lives);
         trackScore(this.state.points);
         trackLevels(this.state.level);
-        setTimeout(() => this.initGame(), 2000);
+        this.initGame();
     }
 }
