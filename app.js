@@ -33,10 +33,12 @@ if (startButton) {
       document.getElementById('header').appendChild(resetButton);
       resetButton.addEventListener('click', e => {
         gameArea.stopGame();
+        document.querySelector('#reset_cloak').classList.add('show__reset_cloak');
         setTimeout(() => {
           gameArea.resetGame();
+          document.querySelector('#reset_cloak').classList.remove('show__reset_cloak');
           document.querySelector('#canvas').style.backgroundColor = 'mediumblue';
-        }, 2000);
+        }, 1000);
       });
     }
   });
@@ -90,19 +92,19 @@ const delayedColorChange = (color, delay) => {
 };
 
 async function rainbow() {
-  try {
-    await delayedColorChange('#F72585', 1000);
-    await delayedColorChange('#B5179E', 1000);
-    await delayedColorChange('#7209B7', 1000);
-    await delayedColorChange('#560BAD', 1000);
-    await delayedColorChange('#560BAD', 1000);
-    await delayedColorChange('#4361EE', 1000);
-    await delayedColorChange('#4895EF', 1000);
-    await delayedColorChange('#4CC9F0', 1000);
-    await delayedColorChange('#00e5ff', 1000);
-    await delayedColorChange('#80ffdb', 1000);
+    try {
+      await delayedColorChange('#F72585', 1000);
+      await delayedColorChange('#B5179E', 1000);
+      await delayedColorChange('#7209B7', 1000);
+      await delayedColorChange('#560BAD', 1000);
+      await delayedColorChange('#560BAD', 1000);
+      await delayedColorChange('#4361EE', 1000);
+      await delayedColorChange('#4895EF', 1000);
+      await delayedColorChange('#4CC9F0', 1000);
+      await delayedColorChange('#00e5ff', 1000);
+      await delayedColorChange('#80ffdb', 1000);
     
-  } catch (error) {
-    console.log(`error ${error}`);
+    } catch (error) {
+      console.log(`error ${error}`);
   }
 }
