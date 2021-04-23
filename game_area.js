@@ -18,7 +18,6 @@ class GameArea {
         this.enemiesIntervalId = null;
         this.boss = new Boss(this, {w: 64, h: 64}, {x: this.size.w/2 - 25 , y: this.size.h/2 - 275}, 0.02, [{url: './images/icecream-truck.png'}]);
         this.fart = new Fart(this, {w: 60, h: 86}, {x: this.size.w/2, y: this.size.h/2 + this.player.size.h/2}, {x: 0, y: 0}, [{url: './images/fart.png'}]);
-
     }
 
     initGame(){
@@ -249,7 +248,6 @@ class GameArea {
         this.state.level = 1;
         this.state.points = 0;
         this.state.state = 'playing';
-        this.state.bossLevel = 0;
         this.projectiles = [];
         this.wins = [];
         this.missiles = [];
@@ -271,5 +269,7 @@ class GameArea {
         trackScore(this.state.points);
         trackLevels(this.state.level);
         this.initGame();
+
     }
+
 }
