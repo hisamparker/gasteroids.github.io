@@ -30,6 +30,7 @@ class GameArea {
         trackScore(this.state.points);
         this.player.draw();
         this.sounds.makeBackgroundMusic();
+        this.spawnEnemies();
 
     }
 
