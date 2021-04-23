@@ -35,6 +35,7 @@ if (startButton) {
         gameArea.stopGame();
         setTimeout(() => {
           gameArea.resetGame();
+          document.querySelector('#canvas').style.backgroundColor = 'mediumblue';
         }, 2000);
       });
     }
